@@ -1,7 +1,7 @@
 name: Maven Build and Test
 
-on:
-  push:
+on: 
+  push: 
     branches:
       - master
 
@@ -19,3 +19,9 @@ jobs:
         java-version: '17'
     - name: Build using Maven
       run: mvn clean install
+    - name: run-test
+      run: mvn test
+    - name: setup-docker
+      run: docker/setup-buildx-action@v2
+    - name: build-docker-image
+      run: docker build -t sonil/java-app"1.0.0
