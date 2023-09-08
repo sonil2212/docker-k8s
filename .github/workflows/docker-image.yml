@@ -24,4 +24,4 @@ jobs:
     - name: setup-docker
       run: docker/setup-buildx-action@v2
     - name: build-docker-image
-      run: docker build -t sonil/java-app"1.0.0
+      run: docker build -t sonil/java-app"1.0.0 .
